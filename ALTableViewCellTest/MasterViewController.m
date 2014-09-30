@@ -26,6 +26,18 @@
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 84.0;
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(preferredContentSizeChanged:)
+                                                 name:UIContentSizeCategoryDidChangeNotification
+                                               object:nil];
+
+}
+
+- (void)preferredContentSizeChanged:(NSNotification *)aNotification
+{
+    NSLog(@"preferredContentSizeChanged");
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table View
