@@ -57,6 +57,17 @@
     return self;
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    // Not sure why this call is here - wouldn't it call layoutSubviews again?
+    [self.contentView layoutIfNeeded];
+    
+    self.contentTitleLabel.preferredMaxLayoutWidth = CGRectGetWidth(self.contentTitleLabel.frame);
+    self.contentTextLabel.preferredMaxLayoutWidth = CGRectGetWidth(self.contentTextLabel.frame);
+}
+
 
 
 @end

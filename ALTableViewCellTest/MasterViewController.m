@@ -24,6 +24,8 @@
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"SampleContent" ofType:@"plist"];
     self.items = [[NSArray alloc] initWithContentsOfFile:plistPath];
     
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 84.0;
 }
 
 #pragma mark - Table View
