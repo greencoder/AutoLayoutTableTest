@@ -36,7 +36,6 @@
 
 - (void)preferredContentSizeChanged:(NSNotification *)aNotification
 {
-    NSLog(@"preferredContentSizeChanged");
     [self.tableView reloadData];
 }
 
@@ -61,6 +60,10 @@
     cell.contentTitleLabel.text = item[@"title"];
     cell.contentTextLabel.text = item[@"text"];
 
+    // We always set the font here so that if the dynamic text settings change,
+    // we get a chance to reapply them
+    [cell updateFonts];
+    
     return cell;
 }
 

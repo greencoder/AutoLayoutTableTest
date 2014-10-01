@@ -13,4 +13,6 @@
 @property (nonatomic, strong) UILabel *contentTitleLabel;
 @property (nonatomic, strong) UILabel *contentTextLabel;
 
+- (void)updateFonts;
+
 @end

@@ -15,7 +15,6 @@
 		2B4CF4E819DB3431009E957E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B4CF4E619DB3431009E957E /* LaunchScreen.xib */; };
 		2B4CF4FF19DB345C009E957E /* NGCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4CF4FE19DB345C009E957E /* NGCustomTableViewCell.m */; };
 		2B4CF50119DB34A9009E957E /* SampleContent.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B4CF50019DB34A9009E957E /* SampleContent.plist */; };
-		2B4CF50419DB3B9F009E957E /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2B4CF50219DB3B9F009E957E /* readme.txt */; };
 		2B4CF50519DB3B9F009E957E /* TemplateIcon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B4CF50319DB3B9F009E957E /* TemplateIcon2x.png */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +32,6 @@
 		2B4CF4FD19DB345C009E957E /* NGCustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGCustomTableViewCell.h; sourceTree = "<group>"; };
 		2B4CF4FE19DB345C009E957E /* NGCustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGCustomTableViewCell.m; sourceTree = "<group>"; };
 		2B4CF50019DB34A9009E957E /* SampleContent.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SampleContent.plist; sourceTree = "<group>"; };
-		2B4CF50219DB3B9F009E957E /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		2B4CF50319DB3B9F009E957E /* TemplateIcon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemplateIcon2x.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +76,6 @@
 				2B4CF4FD19DB345C009E957E /* NGCustomTableViewCell.h */,
 				2B4CF4FE19DB345C009E957E /* NGCustomTableViewCell.m */,
 				2B4CF50019DB34A9009E957E /* SampleContent.plist */,
-				2B4CF50219DB3B9F009E957E /* readme.txt */,
 				2B4CF50319DB3B9F009E957E /* TemplateIcon2x.png */,
 			);
 			path = ALTableViewCellTest;
@@ -150,7 +147,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B4CF50419DB3B9F009E957E /* readme.txt in Resources */,
 				2B4CF4E319DB3431009E957E /* Main.storyboard in Resources */,
 				2B4CF50519DB3B9F009E957E /* TemplateIcon2x.png in Resources */,
 				2B4CF4E819DB3431009E957E /* LaunchScreen.xib in Resources */,
@@ -310,6 +306,7 @@
 				2B4CF4F919DB3431009E957E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

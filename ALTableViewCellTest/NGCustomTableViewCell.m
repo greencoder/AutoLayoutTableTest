@@ -8,6 +8,10 @@
 
 #import "NGCustomTableViewCell.h"
 
+@interface NGCustomTableViewCell ()
+
+@end
+
 @implementation NGCustomTableViewCell
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
@@ -20,7 +24,6 @@
         _contentTitleLabel.numberOfLines = 0;
         _contentTitleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         _contentTitleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        _contentTitleLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
         _contentTitleLabel.textColor = [UIColor blackColor];
         [self.contentView addSubview:_contentTitleLabel];
         
@@ -29,14 +32,14 @@
         _contentTextLabel.numberOfLines = 0;
         _contentTextLabel.lineBreakMode = NSLineBreakByWordWrapping;
         _contentTextLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        _contentTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
         [self.contentView addSubview:_contentTextLabel];
 
+        // Set the fonts
+        [self updateFonts];
+
+        // Add the constraints
         NSDictionary *views = NSDictionaryOfVariableBindings(_contentTitleLabel, _contentTextLabel);
         NSDictionary *metrics = @{ @"vPadding": @10, @"hPadding": @12 };
-        
-        // Should these constraints be in layoutSubviews or updateConstraints instead? I have a feeling that by
-        // putting them in initWithCoder, I'm not giving it the ability to update when the text size changes
         
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(hPadding)-[_contentTitleLabel]-(hPadding)-|"
                                                                                  options:0
@@ -52,22 +55,27 @@
                                                                                  options:0
                                                                                  metrics:metrics
                                                                                    views:views]];
-    
+        
     }
     return self;
+}
+
+- (void)updateFonts
+{
+    _contentTitleLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    _contentTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
 }
 
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    
-    // Not sure why this call is here - wouldn't it call layoutSubviews again?
+ 
+    // This needs to be here otherwise view resize events (like rotation) won't
+    // update the height of the cell
     [self.contentView layoutIfNeeded];
     
     self.contentTitleLabel.preferredMaxLayoutWidth = CGRectGetWidth(self.contentTitleLabel.frame);
     self.contentTextLabel.preferredMaxLayoutWidth = CGRectGetWidth(self.contentTextLabel.frame);
 }
-
-
 
 @end
