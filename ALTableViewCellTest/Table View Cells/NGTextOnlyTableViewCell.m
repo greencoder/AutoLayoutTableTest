@@ -6,17 +6,19 @@
 //  Copyright (c) 2014 National Geographic. All rights reserved.
 //
 
-#import "NGCustomTableViewCell.h"
+#import "NGTextOnlyTableViewCell.h"
 
-@interface NGCustomTableViewCell ()
+@interface NGTextOnlyTableViewCell ()
+
+- (void)updateFonts;
 
 @end
 
-@implementation NGCustomTableViewCell
+@implementation NGTextOnlyTableViewCell
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
-    self = [super initWithCoder:aDecoder];
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if(self)
     {
         // Set up the headline text label
@@ -33,10 +35,10 @@
         _contentTextLabel.lineBreakMode = NSLineBreakByWordWrapping;
         _contentTextLabel.translatesAutoresizingMaskIntoConstraints = NO;
         [self.contentView addSubview:_contentTextLabel];
-
+        
         // Set the fonts
         [self updateFonts];
-
+        
         // Add the constraints
         NSDictionary *views = NSDictionaryOfVariableBindings(_contentTitleLabel, _contentTextLabel);
         NSDictionary *metrics = @{ @"vPadding": @10, @"hPadding": @12 };
@@ -60,6 +62,13 @@
     return self;
 }
 
+- (void)setContentDict:(NSDictionary *)contentDict
+{
+    _contentTitleLabel.text = contentDict[@"title"];
+    _contentTextLabel.text = contentDict[@"text"];
+    [self updateFonts];
+}
+
 - (void)updateFonts
 {
     _contentTitleLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
@@ -76,6 +85,9 @@
     
     self.contentTitleLabel.preferredMaxLayoutWidth = CGRectGetWidth(self.contentTitleLabel.frame);
     self.contentTextLabel.preferredMaxLayoutWidth = CGRectGetWidth(self.contentTextLabel.frame);
+
+    // Required to call this again to finalize any setup required
+    [super layoutSubviews];
 }
 
 @end

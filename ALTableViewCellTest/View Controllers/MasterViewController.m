@@ -7,7 +7,9 @@
 //
 
 #import "MasterViewController.h"
-#import "NGCustomTableViewCell.h"
+
+#import "NGTextOnlyTableViewCell.h"
+#import "NGTextPhotoTableViewCell.h"
 
 @interface MasterViewController ()
 
@@ -22,16 +24,27 @@
     [super viewDidLoad];
 
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"SampleContent" ofType:@"plist"];
-    self.items = [[NSArray alloc] initWithContentsOfFile:plistPath];
     
+    // Debug: Only use the first item
+    //self.items = [[NSArray alloc] initWithContentsOfFile:plistPath];
+    NSArray *itemsArray = [[NSArray alloc] initWithContentsOfFile:plistPath];
+    self.items = @[itemsArray.firstObject];
+    
+    // Use automatic row heights
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 84.0;
 
+    // Observe the content size change so we can tell when the user changes their
+    // system-wide type settings
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(preferredContentSizeChanged:)
                                                  name:UIContentSizeCategoryDidChangeNotification
                                                object:nil];
-
+    
+    // Register our two types of table view cell subclasses for use
+    [self.tableView registerClass:[NGTextPhotoTableViewCell class] forCellReuseIdentifier:@"PhotoCell"];
+    [self.tableView registerClass:[NGTextOnlyTableViewCell class] forCellReuseIdentifier:@"TextCell"];
+    
 }
 
 - (void)preferredContentSizeChanged:(NSNotification *)aNotification
@@ -53,18 +66,20 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NGCustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    NSDictionary *item = self.items[indexPath.row];
-
-    cell.contentTitleLabel.text = item[@"title"];
-    cell.contentTextLabel.text = item[@"text"];
-
-    // We always set the font here so that if the dynamic text settings change,
-    // we get a chance to reapply them
-    [cell updateFonts];
+    NSDictionary *contentDict = self.items[indexPath.row];
     
+    if (contentDict[@"showPhoto"])
+    {
+        NGTextPhotoTableViewCell *cell = (NGTextPhotoTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"PhotoCell" forIndexPath:indexPath];
+        cell.contentDict = self.items[indexPath.row];
+        NSLog(@"cell: %@", cell.class);
+        return cell;
+    }
+
+    NGTextOnlyTableViewCell *cell = (NGTextOnlyTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TextCell" forIndexPath:indexPath];
+    cell.contentDict = self.items[indexPath.row];
     return cell;
+
 }
 
 @end

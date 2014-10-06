@@ -7,31 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B36964419E2EDE10006EA92 /* camera.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2B36963C19E2EDE10006EA92 /* camera.pdf */; };
+		2B36964519E2EDE10006EA92 /* SampleContent.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B36963D19E2EDE10006EA92 /* SampleContent.plist */; };
+		2B36964619E2EDE10006EA92 /* NGTextOnlyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B36964019E2EDE10006EA92 /* NGTextOnlyTableViewCell.m */; };
+		2B36964719E2EDE10006EA92 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B36964319E2EDE10006EA92 /* MasterViewController.m */; };
+		2B36964A19E2EE0E0006EA92 /* NGTextPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B36964919E2EE0E0006EA92 /* NGTextPhotoTableViewCell.m */; };
+		2B36964C19E2FECD0006EA92 /* defaultThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B36964B19E2FECD0006EA92 /* defaultThumb.png */; };
 		2B4CF4D719DB3431009E957E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4CF4D619DB3431009E957E /* main.m */; };
 		2B4CF4DA19DB3431009E957E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4CF4D919DB3431009E957E /* AppDelegate.m */; };
-		2B4CF4DD19DB3431009E957E /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4CF4DC19DB3431009E957E /* MasterViewController.m */; };
 		2B4CF4E319DB3431009E957E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4CF4E119DB3431009E957E /* Main.storyboard */; };
 		2B4CF4E519DB3431009E957E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B4CF4E419DB3431009E957E /* Images.xcassets */; };
 		2B4CF4E819DB3431009E957E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B4CF4E619DB3431009E957E /* LaunchScreen.xib */; };
-		2B4CF4FF19DB345C009E957E /* NGCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4CF4FE19DB345C009E957E /* NGCustomTableViewCell.m */; };
-		2B4CF50119DB34A9009E957E /* SampleContent.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B4CF50019DB34A9009E957E /* SampleContent.plist */; };
 		2B4CF50519DB3B9F009E957E /* TemplateIcon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B4CF50319DB3B9F009E957E /* TemplateIcon2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B36963C19E2EDE10006EA92 /* camera.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = camera.pdf; sourceTree = "<group>"; };
+		2B36963D19E2EDE10006EA92 /* SampleContent.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SampleContent.plist; sourceTree = "<group>"; };
+		2B36963F19E2EDE10006EA92 /* NGTextOnlyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGTextOnlyTableViewCell.h; sourceTree = "<group>"; };
+		2B36964019E2EDE10006EA92 /* NGTextOnlyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGTextOnlyTableViewCell.m; sourceTree = "<group>"; };
+		2B36964219E2EDE10006EA92 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		2B36964319E2EDE10006EA92 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		2B36964819E2EE0E0006EA92 /* NGTextPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGTextPhotoTableViewCell.h; sourceTree = "<group>"; };
+		2B36964919E2EE0E0006EA92 /* NGTextPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGTextPhotoTableViewCell.m; sourceTree = "<group>"; };
+		2B36964B19E2FECD0006EA92 /* defaultThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultThumb.png; sourceTree = "<group>"; };
 		2B4CF4D119DB3431009E957E /* ALTableViewCellTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALTableViewCellTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4CF4D519DB3431009E957E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B4CF4D619DB3431009E957E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2B4CF4D819DB3431009E957E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2B4CF4D919DB3431009E957E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2B4CF4DB19DB3431009E957E /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		2B4CF4DC19DB3431009E957E /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		2B4CF4E219DB3431009E957E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B4CF4E419DB3431009E957E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2B4CF4E719DB3431009E957E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		2B4CF4FD19DB345C009E957E /* NGCustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGCustomTableViewCell.h; sourceTree = "<group>"; };
-		2B4CF4FE19DB345C009E957E /* NGCustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGCustomTableViewCell.m; sourceTree = "<group>"; };
-		2B4CF50019DB34A9009E957E /* SampleContent.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SampleContent.plist; sourceTree = "<group>"; };
 		2B4CF50319DB3B9F009E957E /* TemplateIcon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemplateIcon2x.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,6 +53,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B36963B19E2EDE10006EA92 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				2B36964B19E2FECD0006EA92 /* defaultThumb.png */,
+				2B36963C19E2EDE10006EA92 /* camera.pdf */,
+				2B36963D19E2EDE10006EA92 /* SampleContent.plist */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		2B36963E19E2EDE10006EA92 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2B36963F19E2EDE10006EA92 /* NGTextOnlyTableViewCell.h */,
+				2B36964019E2EDE10006EA92 /* NGTextOnlyTableViewCell.m */,
+				2B36964819E2EE0E0006EA92 /* NGTextPhotoTableViewCell.h */,
+				2B36964919E2EE0E0006EA92 /* NGTextPhotoTableViewCell.m */,
+			);
+			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		2B36964119E2EDE10006EA92 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2B36964219E2EDE10006EA92 /* MasterViewController.h */,
+				2B36964319E2EDE10006EA92 /* MasterViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		2B4CF4C819DB3431009E957E = {
 			isa = PBXGroup;
 			children = (
@@ -65,17 +102,15 @@
 		2B4CF4D319DB3431009E957E /* ALTableViewCellTest */ = {
 			isa = PBXGroup;
 			children = (
+				2B36963B19E2EDE10006EA92 /* Content */,
+				2B36963E19E2EDE10006EA92 /* Table View Cells */,
+				2B36964119E2EDE10006EA92 /* View Controllers */,
 				2B4CF4D819DB3431009E957E /* AppDelegate.h */,
 				2B4CF4D919DB3431009E957E /* AppDelegate.m */,
-				2B4CF4DB19DB3431009E957E /* MasterViewController.h */,
-				2B4CF4DC19DB3431009E957E /* MasterViewController.m */,
 				2B4CF4E119DB3431009E957E /* Main.storyboard */,
 				2B4CF4E419DB3431009E957E /* Images.xcassets */,
 				2B4CF4E619DB3431009E957E /* LaunchScreen.xib */,
 				2B4CF4D419DB3431009E957E /* Supporting Files */,
-				2B4CF4FD19DB345C009E957E /* NGCustomTableViewCell.h */,
-				2B4CF4FE19DB345C009E957E /* NGCustomTableViewCell.m */,
-				2B4CF50019DB34A9009E957E /* SampleContent.plist */,
 				2B4CF50319DB3B9F009E957E /* TemplateIcon2x.png */,
 			);
 			path = ALTableViewCellTest;
@@ -148,9 +183,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B4CF4E319DB3431009E957E /* Main.storyboard in Resources */,
+				2B36964519E2EDE10006EA92 /* SampleContent.plist in Resources */,
+				2B36964419E2EDE10006EA92 /* camera.pdf in Resources */,
+				2B36964C19E2FECD0006EA92 /* defaultThumb.png in Resources */,
 				2B4CF50519DB3B9F009E957E /* TemplateIcon2x.png in Resources */,
 				2B4CF4E819DB3431009E957E /* LaunchScreen.xib in Resources */,
-				2B4CF50119DB34A9009E957E /* SampleContent.plist in Resources */,
 				2B4CF4E519DB3431009E957E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,9 +199,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B36964619E2EDE10006EA92 /* NGTextOnlyTableViewCell.m in Sources */,
+				2B36964A19E2EE0E0006EA92 /* NGTextPhotoTableViewCell.m in Sources */,
 				2B4CF4DA19DB3431009E957E /* AppDelegate.m in Sources */,
-				2B4CF4FF19DB345C009E957E /* NGCustomTableViewCell.m in Sources */,
-				2B4CF4DD19DB3431009E957E /* MasterViewController.m in Sources */,
+				2B36964719E2EDE10006EA92 /* MasterViewController.m in Sources */,
 				2B4CF4D719DB3431009E957E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

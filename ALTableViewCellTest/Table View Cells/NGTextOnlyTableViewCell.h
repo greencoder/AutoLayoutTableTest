@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NGCustomTableViewCell : UITableViewCell
+@interface NGTextOnlyTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) UILabel *contentTitleLabel;
 @property (nonatomic, strong) UILabel *contentTextLabel;
-
-- (void)updateFonts;
+@property (nonatomic, strong) NSDictionary *contentDict;
 
 @end
