@@ -28,7 +28,7 @@
     // Debug: Only use the first item
     //self.items = [[NSArray alloc] initWithContentsOfFile:plistPath];
     NSArray *itemsArray = [[NSArray alloc] initWithContentsOfFile:plistPath];
-    self.items = @[itemsArray.firstObject];
+    self.items = @[itemsArray[0], itemsArray[1], itemsArray[3], itemsArray[4]];
     
     // Use automatic row heights
     self.tableView.rowHeight = UITableViewAutomaticDimension;
@@ -68,17 +68,21 @@
 {
     NSDictionary *contentDict = self.items[indexPath.row];
     
-    if (contentDict[@"showPhoto"])
+    if ([contentDict[@"showPhoto"] integerValue] == 1)
     {
+        NSLog(@"textPhoto");
         NGTextPhotoTableViewCell *cell = (NGTextPhotoTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"PhotoCell" forIndexPath:indexPath];
         cell.contentDict = self.items[indexPath.row];
-        NSLog(@"cell: %@", cell.class);
         return cell;
     }
-
-    NGTextOnlyTableViewCell *cell = (NGTextOnlyTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TextCell" forIndexPath:indexPath];
-    cell.contentDict = self.items[indexPath.row];
-    return cell;
+    else
+    {
+        NSLog(@"textOnly");
+        NGTextOnlyTableViewCell *cell = (NGTextOnlyTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TextCell" forIndexPath:indexPath];
+        cell.contentDict = self.items[indexPath.row];
+        return cell;
+    }
+    
 
 }
 

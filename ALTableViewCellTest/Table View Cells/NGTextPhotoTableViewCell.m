@@ -48,29 +48,33 @@
         
         // Add the constraints
         NSDictionary *views = NSDictionaryOfVariableBindings(_contentTitleLabel, _contentTextLabel, _contentThumb);
-        NSDictionary *metrics = @{ @"vPadding": @10, @"hPadding": @12 };
+
+        NSDictionary *metrics = @{
+            @"vPadding": @10,
+            @"hPadding": @12,
+        };
         
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_contentThumb(==70)]"
                                                                                  options:0
                                                                                  metrics:metrics
                                                                                    views:views]];
         
-        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(vPadding)-[_contentThumb(==70)]-(vPadding)-|"
+        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(vPadding)-[_contentThumb(==70)]"
                                                                                  options:0
                                                                                  metrics:metrics
                                                                                    views:views]];
         
-        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(hPadding)-[_contentTitleLabel]-[_contentThumb]-(hPadding)-|"
+        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(hPadding)-[_contentThumb]-[_contentTitleLabel]-(hPadding)-|"
                                                                                  options:0
                                                                                  metrics:metrics
                                                                                    views:views]];
         
-        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(hPadding)-[_contentTextLabel]-[_contentThumb]-(hPadding)-|"
+        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(hPadding)-[_contentThumb]-[_contentTextLabel]-(hPadding)-|"
                                                                                  options:0
                                                                                  metrics:metrics
                                                                                    views:views]];
         
-        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(vPadding)-[_contentTitleLabel]-[_contentTextLabel]"
+        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(vPadding)-[_contentTitleLabel]-[_contentTextLabel]-(vPadding)-|"
                                                                                  options:0
                                                                                  metrics:metrics
                                                                                    views:views]];

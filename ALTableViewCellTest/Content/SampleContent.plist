@@ -12,7 +12,7 @@
 	</dict>
 	<dict>
 		<key>showPhoto</key>
-		<false/>
+		<true/>
 		<key>title</key>
 		<string>This is test title two</string>
 		<key>text</key>
@@ -20,7 +20,7 @@
 	</dict>
 	<dict>
 		<key>showPhoto</key>
-		<false/>
+		<true/>
 		<key>title</key>
 		<string>This is test title three</string>
 		<key>text</key>
@@ -28,7 +28,7 @@
 	</dict>
 	<dict>
 		<key>showPhoto</key>
-		<false/>
+		<true/>
 		<key>title</key>
 		<string>This is test title four</string>
 		<key>text</key>
@@ -36,7 +36,7 @@
 	</dict>
 	<dict>
 		<key>showPhoto</key>
-		<false/>
+		<true/>
 		<key>title</key>
 		<string>This is test title five</string>
 		<key>text</key>
