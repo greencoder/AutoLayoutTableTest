@@ -73,12 +73,22 @@
                                                                                  options:0
                                                                                  metrics:metrics
                                                                                    views:views]];
-        
-        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(vPadding)-[_contentTitleLabel]-[_contentTextLabel]-(vPadding)-|"
+
+        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(vPadding)-[_contentTitleLabel]"
+                                                                                 options:0
+                                                                                 metrics:metrics
+                                                                                   views:views]];
+
+        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_contentTitleLabel]-[_contentTextLabel]-(>=vPadding)-|"
                                                                                  options:0
                                                                                  metrics:metrics
                                                                                    views:views]];
         
+        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[contentView(>=94)]"
+                                                                                 options:0
+                                                                                 metrics:nil
+                                                                                   views:@{@"contentView": self.contentView}]];
+
     }
     return self;
 }

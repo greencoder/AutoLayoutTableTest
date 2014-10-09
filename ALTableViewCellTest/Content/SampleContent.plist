@@ -44,11 +44,11 @@
 	</dict>
 	<dict>
 		<key>showPhoto</key>
-		<false/>
+		<true/>
 		<key>title</key>
 		<string>This is test title six</string>
 		<key>text</key>
-		<string>Ullamco dolore pork loin flank tongue tail cupidatat salami. Filet mignon cupidatat eiusmod, fatback pork loin esse ea. Shankle landjaeger bacon prosciutto ea flank fugiat nulla. Cupidatat laborum cillum occaecat, nulla esse corned beef.</string>
+		<string>Ullamco dolore pork loin.</string>
 	</dict>
 	<dict>
 		<key>showPhoto</key>

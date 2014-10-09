@@ -26,9 +26,7 @@
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"SampleContent" ofType:@"plist"];
     
     // Debug: Only use the first item
-    //self.items = [[NSArray alloc] initWithContentsOfFile:plistPath];
-    NSArray *itemsArray = [[NSArray alloc] initWithContentsOfFile:plistPath];
-    self.items = @[itemsArray[0], itemsArray[1], itemsArray[3], itemsArray[4]];
+    self.items = [[NSArray alloc] initWithContentsOfFile:plistPath];
     
     // Use automatic row heights
     self.tableView.rowHeight = UITableViewAutomaticDimension;
